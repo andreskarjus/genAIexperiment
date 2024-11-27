@@ -424,3 +424,17 @@ examplepairs = function(var, fd=filedata){
     image_border(color = "white", geometry = "2x2") %>% 
     image_append() %>% gconvert
 }
+
+# theme for plots
+th= theme_bw()+
+  theme(plot.background = element_rect("white", "white"),
+        plot.title = element_text(size=9),
+        axis.title.x = element_blank(),
+        strip.background = element_rect(fill="white"),
+        strip.text = element_text(hjust=0),
+        panel.grid.minor = element_blank(),
+        axis.ticks.length = unit(0, "cm"),
+        axis.title.y = element_text(size=9),
+        plot.margin = margin(b=0)
+  )
+nopadding = plot_annotation(theme=theme(plot.margin = margin(0,0,0,0)))
